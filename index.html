@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Onboarding</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Customer Onboarding</h1>
+        </header>
+
+        <form id="onboardingForm" class="onboarding-form">
+            <!-- Progress Indicator -->
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <div class="progress-steps">
+                    <div class="step active" data-step="1">
+                        <span class="step-number">1</span>
+                        <span class="step-label">Company Info</span>
+                    </div>
+                    <div class="step" data-step="2">
+                        <span class="step-number">2</span>
+                        <span class="step-label">Billing Info</span>
+                    </div>
+                    <div class="step" data-step="3">
+                        <span class="step-number">3</span>
+                        <span class="step-label">Shipping Info</span>
+                    </div>
+                    <div class="step" data-step="4">
+                        <span class="step-number">4</span>
+                        <span class="step-label">Practitioner Info</span>
+                    </div>
+                    <div class="step" data-step="5">
+                        <span class="step-number">5</span>
+                        <span class="step-label">Trade References</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Section 1: Company Information -->
+            <section class="form-section" id="section1">
+                <h2>COMPANY INFORMATION</h2>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="businessName">LEGAL BUSINESS NAME</label>
+                        <input type="text" id="businessName" name="businessName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">PHONE</label>
+                        <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="nameOfOwner">NAME OF OWNER</label>
+                        <input type="text" id="nameOfOwner" name="nameOfOwner" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="billingAddress">BILLING ADDRESS</label>
+                        <input type="text" id="billingAddress" name="billingAddress" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="city">CITY</label>
+                        <input type="text" id="city" name="city" required>
+                    </div>
+                    <div class="form-group" width="50%">
+                        <label for="state">STATE</label>
+                        <select id="state" name="state" required>
+                            <option value="">Select State</option>
+                            <option value="AL">Alabama</option>
+                            <option value="AK">Alaska</option>
+                            <option value="AZ">Arizona</option>
+                            <option value="AR">Arkansas</option>
+                            <option value="CA">California</option>
+                            <option value="CO">Colorado</option>
+                            <option value="CT">Connecticut</option>
+                            <option value="DE">Delaware</option>
+                            <option value="FL">Florida</option>
+                            <option value="GA">Georgia</option>
+                            <option value="HI">Hawaii</option>
+                            <option value="ID">Idaho</option>
+                            <option value="IL">Illinois</option>
+                            <option value="IN">Indiana</option>
+                            <option value="IA">Iowa</option>
+                            <option value="KS">Kansas</option>
+                            <option value="KY">Kentucky</option>
+                            <option value="LA">Louisiana</option>
+                            <option value="ME">Maine</option>
+                            <option value="MD">Maryland</option>
+                            <option value="MA">Massachusetts</option>
+                            <option value="MI">Michigan</option>
+                            <option value="MN">Minnesota</option>
+                            <option value="MS">Mississippi</option>
+                            <option value="MO">Missouri</option>
+                            <option value="MT">Montana</option>
+                            <option value="NE">Nebraska</option>
+                            <option value="NV">Nevada</option>
+                            <option value="NH">New Hampshire</option>
+                            <option value="NJ">New Jersey</option>
+                            <option value="NM">New Mexico</option>
+                            <option value="NY">New York</option>
+                            <option value="NC">North Carolina</option>
+                            <option value="ND">North Dakota</option>
+                            <option value="OH">Ohio</option>
+                            <option value="OK">Oklahoma</option>
+                            <option value="OR">Oregon</option>
+                            <option value="PA">Pennsylvania</option>
+                            <option value="RI">Rhode Island</option>
+                            <option value="SC">South Carolina</option>
+                            <option value="SD">South Dakota</option>
+                            <option value="TN">Tennessee</option>
+                            <option value="TX">Texas</option>
+                            <option value="UT">Utah</option>
+                            <option value="VT">Vermont</option>
+                            <option value="VA">Virginia</option>
+                            <option value="WA">Washington</option>
+                            <option value="WV">West Virginia</option>
+                            <option value="WI">Wisconsin</option>
+                            <option value="WY">Wyoming</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="zipCode">ZIP CODE</label>
+                        <input type="text" id="zipCode" name="zipCode" placeholder="12345" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="apContactName">A/P CONTACT NAME</label>
+                        <input type="text" id="apContactName" name="apContactName">
+                    </div>
+                    <div class="form-group">
+                        <label for="apPhone">A/P PHONE</label>
+                        <input type="tel" id="apPhone" name="apPhone" placeholder="(555) 123-4567">
+                    </div>
+                    <div class="form-group">
+                        <label for="apEmail">A/P EMAIL</label>
+                        <input type="email" id="apEmail" name="apEmail">
+                    </div>
+                    <div class="form-group">
+                        <label for="apFax">A/P FAX</label>
+                        <input type="tel" id="apFax" name="apFax" placeholder="(555) 123-4567">
+                    </div>
+                    <div class="form-group">
+                        <label for="website">WEBSITE</label>
+                        <input type="url" id="website" name="website" placeholder="https://www.example.com" required>
+                    </div>
+                    <div class="form-group" style="width: 380px">
+                        <label>TYPE OF BUSINESS</label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="businessType" value="hospital" required>
+                                <span>Hospital</span>
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="businessType" value="dmeFacility" required>
+                                <span>DME Facility</span>
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="businessType" value="standaloneClinic" required>
+                                <span>Clinic/Center</span>
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="businessType" value="other" required>
+                                <span>Other</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group" fullwidth>
+                        <label for="federalTaxId">FEDERAL TAX ID</label>
+                        <div class="tax-id-container">
+                            <select id="taxIdType" name="taxIdType" required>
+                                <option value="">Select Type</option>
+                                <option value="EIN">EIN</option>
+                                <option value="SSN">SSN</option>
+                            </select>
+                            <input type="text" id="federalTaxId" name="federalTaxId" placeholder="XXXXXXXXX" required>
+                        </div>
+                        <small class="note">PLEASE USE SEPARATE CREDIT APPLICATION FOR EACH TAX ID</small>
+                    </div>
+                    <div class="form-group" fullwidth>
+                        <label for="OrganizationNPI">Organization NPI</label>
+                        <div class="npi-container">
+                            <input type="text" id="OrgNPI" name="OrganizationNPI" placeholder="XXXXXXXXXX">
+                        </div>
+                    </div>
+                    <div id="dmeFields" class="conditional-fields full-width" style="display: none;">
+                        <div class="form-group full-width">
+                            <label for="dmeLicenseNumber">DME LICENSE NUMBER</label>
+                            <input type="text" id="dmeLicenseNumber" name="dmeLicenseNumber" placeholder="Enter DME License Number">
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="dmeIssuingState">ISSUING STATE</label>
+                            <select id="dmeIssuingState" name="dmeIssuingState">
+                                <option value="">Select State</option>
+                                <option value="AL">Alabama</option>
+                                <option value="AK">Alaska</option>
+                                <option value="AZ">Arizona</option>
+                                <option value="AR">Arkansas</option>
+                                <option value="CA">California</option>
+                                <option value="CO">Colorado</option>
+                                <option value="CT">Connecticut</option>
+                                <option value="DE">Delaware</option>
+                                <option value="FL">Florida</option>
+                                <option value="GA">Georgia</option>
+                                <option value="HI">Hawaii</option>
+                                <option value="ID">Idaho</option>
+                                <option value="IL">Illinois</option>
+                                <option value="IN">Indiana</option>
+                                <option value="IA">Iowa</option>
+                                <option value="KS">Kansas</option>
+                                <option value="KY">Kentucky</option>
+                                <option value="LA">Louisiana</option>
+                                <option value="ME">Maine</option>
+                                <option value="MD">Maryland</option>
+                                <option value="MA">Massachusetts</option>
+                                <option value="MI">Michigan</option>
+                                <option value="MN">Minnesota</option>
+                                <option value="MS">Mississippi</option>
+                                <option value="MO">Missouri</option>
+                                <option value="MT">Montana</option>
+                                <option value="NE">Nebraska</option>
+                                <option value="NV">Nevada</option>
+                                <option value="NH">New Hampshire</option>
+                                <option value="NJ">New Jersey</option>
+                                <option value="NM">New Mexico</option>
+                                <option value="NY">New York</option>
+                                <option value="NC">North Carolina</option>
+                                <option value="ND">North Dakota</option>
+                                <option value="OH">Ohio</option>
+                                <option value="OK">Oklahoma</option>
+                                <option value="OR">Oregon</option>
+                                <option value="PA">Pennsylvania</option>
+                                <option value="RI">Rhode Island</option>
+                                <option value="SC">South Carolina</option>
+                                <option value="SD">South Dakota</option>
+                                <option value="TN">Tennessee</option>
+                                <option value="TX">Texas</option>
+                                <option value="UT">Utah</option>
+                                <option value="VT">Vermont</option>
+                                <option value="VA">Virginia</option>
+                                <option value="WA">Washington</option>
+                                <option value="WV">West Virginia</option>
+                                <option value="WI">Wisconsin</option>
+                                <option value="WY">Wyoming</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group full-width">
+                        <label>STATE RE-SELLER PERMIT OR EXEMPTION CERTIFICATE?</label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="resellerPermit" value="no" required>
+                                <span>NO</span>
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="resellerPermit" value="yes" required>
+                                <span>YES (PLEASE INCLUDE A COPY)</span>
+                            </label>
+                        </div>
+                        <div id="resellerDetails" class="conditional-fields" style="display: none;">
+                            <div class="form-group">
+                                <label for="resellerNumber">PERMIT/CERTIFICATE NUMBER</label>
+                                <input type="text" id="resellerNumber" name="resellerNumber">
+                            </div>
+                            <div class="form-group">
+                                <label for="resellerDocument">UPLOAD DOCUMENT</label>
+                                <input type="file" id="resellerDocument" name="resellerDocument" accept=".pdf,.jpg,.jpeg,.png">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="section-navigation">
+                    <button type="button" class="nav-btn next-btn" onclick="nextSection(1)">Next</button>
+                </div>
+            </section>
+
+            <!-- Section 2: Billing Information -->
+            <section class="form-section" id="section2">
+                <h2>BILLING INFORMATION</h2>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>PO NUMBER REQUIRED WITH INVOICES?</label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="poRequired" value="no" required>
+                                <span>NO</span>
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="poRequired" value="yes" required>
+                                <span>YES</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="standingPoNumber">STANDING PO NUMBER</label>
+                        <input type="text" id="standingPoNumber" name="standingPoNumber">
+                    </div>
+                    <div class="form-group">
+                        <label>PREFERRED INVOICE MAILING METHOD</label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="mailingMethod" value="email" required>
+                                <span>EMAIL</span>
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="mailingMethod" value="mail" required>
+                                <span>MAIL</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group full-width">
+                        <label>PAY ALL INVOICES WITH CREDIT CARD?</label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="payWithCard" value="no" required>
+                                <span>NO</span>
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="payWithCard" value="yes" required>
+                                <span>YES</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div id="creditCardDetails" class="conditional-fields" style="display: none;">
+                        <div class="form-group full-width"">
+                            <label>BILLING TERMS</label>
+                            <div class="radio-group">
+                                <label class="radio-label">
+                                    <input type="radio" name="cardPaymentType" value="billFirst">
+                                    <span>BILL ME FIRST (NET 30)</span>
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="cardPaymentType" value="chargeEach">
+                                    <span>CHARGE WITH EACH ORDER (STANDARD)</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="creditCardNumber">CREDIT CARD NUMBER</label>
+                            <input type="text" id="creditCardNumber" name="creditCardNumber" placeholder="1234 5678 9012 3456">
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="cvCode">CV CODE</label>
+                            <input type="text" id="cvCode" name="cvCode" placeholder="123" maxlength="4">
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="expirationDate">EXPIRATION DATE</label>
+                            <input type="text" id="expirationDate" name="expirationDate" placeholder="MM/YY">
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="cardName">NAME AS APPEARS ON CARD</label>
+                            <input type="text" id="cardName" name="cardName">
+                        </div>
+                    </div>
+                </div>
+
+                <h3>BANKING INFORMATION</h3>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="bankName">BANK NAME</label>
+                        <input type="text" id="bankName" name="bankName">
+                    </div>
+                    <div class="form-group">
+                        <label for="bankAddress">ADDRESS</label>
+                        <input type="text" id="bankAddress" name="bankAddress">
+                    </div>
+                    <div class="form-group">
+                        <label for="bankCity">CITY</label>
+                        <input type="text" id="bankCity" name="bankCity">
+                    </div>
+                    <div class="form-group">
+                        <label for="bankState">STATE/REGION</label>
+                        <input type="text" id="bankState" name="bankState">
+                    </div>
+                    <div class="form-group">
+                        <label for="bankCountry">COUNTRY</label>
+                        <input type="text" id="bankCountry" name="bankCountry">
+                    </div>
+                    <div class="form-group">
+                        <label for="bankZip">ZIP/AREA CODE</label>
+                        <input type="text" id="bankZip" name="bankZip">
+                    </div>
+                    <div class="form-group">
+                        <label for="bankPhone">PHONE</label>
+                        <input type="tel" id="bankPhone" name="bankPhone" placeholder="(555) 123-4567">
+                    </div>
+                    <div class="form-group">
+                        <label for="bankFax">FAX</label>
+                        <input type="tel" id="bankFax" name="bankFax" placeholder="(555) 123-4567">
+                    </div>
+                    <div class="form-group">
+                        <label for="bankEmail">EMAIL</label>
+                        <input type="email" id="bankEmail" name="bankEmail">
+                    </div>
+                </div>
+                <div class="section-navigation">
+                    <button type="button" class="nav-btn prev-btn" onclick="prevSection(2)">Previous</button>
+                    <button type="button" class="nav-btn next-btn" onclick="nextSection(2)">Next</button>
+                </div>
+            </section>
+
+            <!-- Section 3: Shipping Information -->
+            <section class="form-section" id="section3">
+                <h2>SHIPPING INFORMATION</h2>
+                <div class="form-grid">
+                    <div class="form-group full-width">
+                        <label>SHIPPING METHOD</label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="shippingMethod" value="upsGround">
+                                <span>UPS GROUND</span>
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="shippingMethod" value="ups2ndDay">
+                                <span>UPS 2ND DAY (STANDARD)</span>
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="shippingMethod" value="ups3rdDay">
+                                <span>UPS 3RD DAY</span>
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="shippingMethod" value="upsNextDay">
+                                <span>UPS NEXT DAY</span>
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="shippingMethod" value="fedex">
+                                <span>FEDEX</span>
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="shippingMethod" value="uspsPriority">
+                                <span>USPS PRIORITY MAIL</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group full-width">
+                        <label>SHIPPING BILL-TO</label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="shippingBillTo" value="yourAccount">
+                                <span>YOUR ACCOUNT?</span>
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="shippingBillTo" value="yourOwnAccount">
+                                <span>YOUR OWN UPS/FEDEX ACCOUNT?</span>
+                            </label>
+                        </div>
+                        <div id="shippingAccountDetails" class="conditional-fields" style="display: none;">
+                            <div class="form-group">
+                                <label for="shippingAccountNumber">YOUR SHIPPING ACCOUNT #:</label>
+                                <input type="text" id="shippingAccountNumber" name="shippingAccountNumber">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group full-width">
+                        <label>SHIPPING CONSOLIDATION METHOD</label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="consolidationMethod" value="daily">
+                                <span>DAILY</span>
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="consolidationMethod" value="3xWeek">
+                                <span>3x WEEK (MON/WED/FRI)</span>
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="consolidationMethod" value="2xWeek">
+                                <span>2x WEEK (TUE/THU)</span>
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="consolidationMethod" value="1xWeek">
+                                <span>1x WEEK</span>
+                            </label>
+                        </div>
+                        <div id="weeklyDayDetails" class="conditional-fields" style="display: none;">
+                            <div class="form-group">
+                                <label for="weeklyDay">Which day?</label>
+                                <select id="weeklyDay" name="weeklyDay">
+                                    <option value="">Select Day</option>
+                                    <option value="monday">Monday</option>
+                                    <option value="tuesday">Tuesday</option>
+                                    <option value="wednesday">Wednesday</option>
+                                    <option value="thursday">Thursday</option>
+                                    <option value="friday">Friday</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>SHIP-TO BRANCH ACCOUNTS</h3>
+                <div class="form-grid">
+                    <div class="form-group full-width">
+                        <p class="">DO ALL BRANCH ACCOUNTS SHARE THE SAME FEDERAL TAX ID AS THE MAIN ACCOUNT? IF NOT, PLEASE USE A SEPARATE CREDIT APPLICATION FOR EACH TAX ID.</p>
+                    </div>
+                    <div class="form-group full-width">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="sameAsBilling" value="yes">
+                            <span>SHIP-TO ADDRESS IS SAME AS BILLING ADDRESS</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="branch-section">
+                    <h4>Branch Account 1</h4>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="branch1Name">BRANCH NAME</label>
+                            <input type="text" id="branch1Name" name="branch1Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="branch1Address">ADDRESS</label>
+                            <input type="text" id="branch1Address" name="branch1Address">
+                        </div>
+                        <div class="form-group">
+                            <label for="branch1City">CITY</label>
+                            <input type="text" id="branch1City" name="branch1City">
+                        </div>
+                        <div class="form-group">
+                            <label for="branch1State">STATE/REGION</label>
+                            <input type="text" id="branch1State" name="branch1State">
+                        </div>
+                        <div class="form-group">
+                            <label for="branch1Country">COUNTRY</label>
+                            <input type="text" id="branch1Country" name="branch1Country">
+                        </div>
+                        <div class="form-group">
+                            <label for="branch1Zip">ZIP/AREA CODE</label>
+                            <input type="text" id="branch1Zip" name="branch1Zip">
+                        </div>
+                        <div class="form-group">
+                            <label for="branch1Phone">PHONE</label>
+                            <input type="tel" id="branch1Phone" name="branch1Phone" placeholder="(555) 123-4567">
+                        </div>
+                        <div class="form-group">
+                            <label for="branch1Fax">FAX</label>
+                            <input type="tel" id="branch1Fax" name="branch1Fax" placeholder="(555) 123-4567">
+                        </div>
+                        <div class="form-group">
+                            <label for="branch1Email">EMAIL</label>
+                            <input type="email" id="branch1Email" name="branch1Email">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="branch-section">
+                    <h4>Branch Account 2</h4>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="branch2Name">BRANCH NAME</label>
+                            <input type="text" id="branch2Name" name="branch2Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="branch2Address">ADDRESS</label>
+                            <input type="text" id="branch2Address" name="branch2Address">
+                        </div>
+                        <div class="form-group">
+                            <label for="branch2City">CITY</label>
+                            <input type="text" id="branch2City" name="branch2City">
+                        </div>
+                        <div class="form-group">
+                            <label for="branch2State">STATE/REGION</label>
+                            <input type="text" id="branch2State" name="branch2State">
+                        </div>
+                        <div class="form-group">
+                            <label for="branch2Country">COUNTRY</label>
+                            <input type="text" id="branch2Country" name="branch2Country">
+                        </div>
+                        <div class="form-group">
+                            <label for="branch2Zip">ZIP/AREA CODE</label>
+                            <input type="text" id="branch2Zip" name="branch2Zip">
+                        </div>
+                        <div class="form-group">
+                            <label for="branch2Phone">PHONE</label>
+                            <input type="tel" id="branch2Phone" name="branch2Phone" placeholder="(555) 123-4567">
+                        </div>
+                        <div class="form-group">
+                            <label for="branch2Fax">FAX</label>
+                            <input type="tel" id="branch2Fax" name="branch2Fax" placeholder="(555) 123-4567">
+                        </div>
+                        <div class="form-group">
+                            <label for="branch2Email">EMAIL</label>
+                            <input type="email" id="branch2Email" name="branch2Email">
+                        </div>
+                    </div>
+                </div>
+                <div class="section-navigation">
+                    <button type="button" class="nav-btn prev-btn" onclick="prevSection(3)">Previous</button>
+                    <button type="button" class="nav-btn next-btn" onclick="nextSection(3)">Next</button>
+                </div>
+            </section>
+
+            <!-- Section 4: Practitioner Information -->
+            <section class="form-section" id="section4">
+                <h2>PRACTITIONER INFORMATION</h2>
+                <div class="practitioner-table">
+                    <div class="table-header">
+                        <div class="col">PRACTITIONER NAME</div>
+                        <div class="col">PROFESSIONAL DESIGNATION</div>
+                        <div class="col">CERTIFICATION #</div>
+                    </div>
+                    <div class="table-row">
+                        <div class="col">
+                            <input type="text" id="practitioner1Name" name="practitioner1Name" placeholder="Enter name">
+                        </div>
+                        <div class="col">
+                            <input type="text" id="practitioner1Designation" name="practitioner1Designation" placeholder="Enter designation">
+                        </div>
+                        <div class="col">
+                            <input type="text" id="practitioner1Certification" name="practitioner1Certification" placeholder="Enter certification #">
+                        </div>
+                    </div>
+                    <div class="table-row">
+                        <div class="col">
+                            <input type="text" name="practitioner2Name" placeholder="Enter name">
+                        </div>
+                        <div class="col">
+                            <input type="text" name="practitioner2Designation" placeholder="Enter designation">
+                        </div>
+                        <div class="col">
+                            <input type="text" name="practitioner2Certification" placeholder="Enter certification #">
+                        </div>
+                    </div>
+                    <div class="table-row">
+                        <div class="col">
+                            <input type="text" name="practitioner3Name" placeholder="Enter name">
+                        </div>
+                        <div class="col">
+                            <input type="text" name="practitioner3Designation" placeholder="Enter designation">
+                        </div>
+                        <div class="col">
+                            <input type="text" name="practitioner3Certification" placeholder="Enter certification #">
+                        </div>
+                    </div>
+                </div>
+                <div class="section-navigation">
+                    <button type="button" class="nav-btn prev-btn" onclick="prevSection(4)">Previous</button>
+                    <button type="button" class="nav-btn next-btn" onclick="nextSection(4)">Next</button>
+                </div>
+            </section>
+
+            <!-- Section 5: Trade Account References -->
+            <section class="form-section" id="section5">
+                <h2>TRADE ACCOUNT REFERENCES</h2>
+                
+                <div class="reference-section">
+                    <h4>Reference 1</h4>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="vendor1Name">NAME OF VENDOR</label>
+                            <input type="text" id="vendor1Name" name="vendor1Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="vendor1Address">ADDRESS</label>
+                            <input type="text" id="vendor1Address" name="vendor1Address">
+                        </div>
+                        <div class="form-group">
+                            <label for="vendor1City">CITY</label>
+                            <input type="text" id="vendor1City" name="vendor1City">
+                        </div>
+                        <div class="form-group">
+                            <label for="vendor1State">STATE/REGION</label>
+                            <input type="text" id="vendor1State" name="vendor1State">
+                        </div>
+                        <div class="form-group">
+                            <label for="vendor1Country">COUNTRY</label>
+                            <input type="text" id="vendor1Country" name="vendor1Country">
+                        </div>
+                        <div class="form-group">
+                            <label for="vendor1Zip">ZIP/AREA CODE</label>
+                            <input type="text" id="vendor1Zip" name="vendor1Zip">
+                        </div>
+                        <div class="form-group">
+                            <label for="vendor1Phone">PHONE</label>
+                            <input type="tel" id="vendor1Phone" name="vendor1Phone" placeholder="(555) 123-4567">
+                        </div>
+                        <div class="form-group">
+                            <label for="vendor1Fax">FAX</label>
+                            <input type="tel" id="vendor1Fax" name="vendor1Fax" placeholder="(555) 123-4567">
+                        </div>
+                        <div class="form-group">
+                            <label for="vendor1Email">EMAIL</label>
+                            <input type="email" id="vendor1Email" name="vendor1Email">
+                        </div>
+                        <div class="form-group">
+                            <label for="vendor1Account">ACCOUNT NUMBER</label>
+                            <input type="text" id="vendor1Account" name="vendor1Account">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reference-section">
+                    <h4>Reference 2</h4>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="vendor2Name">NAME OF VENDOR</label>
+                            <input type="text" id="vendor2Name" name="vendor2Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="vendor2Address">ADDRESS</label>
+                            <input type="text" id="vendor2Address" name="vendor2Address">
+                        </div>
+                        <div class="form-group">
+                            <label for="vendor2City">CITY</label>
+                            <input type="text" id="vendor2City" name="vendor2City">
+                        </div>
+                        <div class="form-group">
+                            <label for="vendor2State">STATE/REGION</label>
+                            <input type="text" id="vendor2State" name="vendor2State">
+                        </div>
+                        <div class="form-group">
+                            <label for="vendor2Country">COUNTRY</label>
+                            <input type="text" id="vendor2Country" name="vendor2Country">
+                        </div>
+                        <div class="form-group">
+                            <label for="vendor2Zip">ZIP/AREA CODE</label>
+                            <input type="text" id="vendor2Zip" name="vendor2Zip">
+                        </div>
+                        <div class="form-group">
+                            <label for="vendor2Phone">PHONE</label>
+                            <input type="tel" id="vendor2Phone" name="vendor2Phone" placeholder="(555) 123-4567">
+                        </div>
+                        <div class="form-group">
+                            <label for="vendor2Fax">FAX</label>
+                            <input type="tel" id="vendor2Fax" name="vendor2Fax" placeholder="(555) 123-4567">
+                        </div>
+                        <div class="form-group">
+                            <label for="vendor2Email">EMAIL</label>
+                            <input type="email" id="vendor2Email" name="vendor2Email">
+                        </div>
+                        <div class="form-group">
+                            <label for="vendor2Account">ACCOUNT NUMBER</label>
+                            <input type="text" id="vendor2Account" name="vendor2Account">
+                        </div>
+                    </div>
+                </div>
+                <div class="section-navigation">
+                    <button type="button" class="nav-btn prev-btn" onclick="prevSection(5)">Previous</button>
+                    <button type="button" class="nav-btn next-btn" onclick="nextSection(5)">Next</button>
+                </div>
+            </section>
+
+            <!-- eSignature Acknowledgement -->
+            <section class="form-section" id="signatureSection">
+                <h2>E-SIGNATURE ACKNOWLEDGEMENT</h2>
+                <div class="signature-container">
+                    <label class="checkbox-label signature-checkbox">
+                        <input type="checkbox" id="eSignature" name="eSignature" required>
+                        <span>I acknowledge that I have read and agree to the terms and conditions of this application. By checking this box, I provide my electronic signature.</span>
+                    </label>
+                </div>
+                
+                <!-- Success Message -->
+                <div id="successMessage" class="success-message" style="display: none;">
+                    <div class="success-icon">✓</div>
+                    <h1>Thank you for your interest in partnering with Cascade.</h1>
+                    <p>Your application has been received and is under review. We’ll share the next steps within the specified timeline. You will receive an email where you can track the application status.</p>
+                </div>
+                
+            <!-- Submit Button -->
+            <div class="section-navigation" id="submitPanel" style="display: none;">
+                <button type="button" class="nav-btn prev-btn" onclick="prevSection(6)">Previous</button>
+                <button type="submit" class="nav-btn submit-btn">Confirm and Submit Application</button>
+            </div>
+            </section>
+
+
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

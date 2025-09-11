@@ -1,0 +1,41 @@
+{
+  "name": "customer-onboarding-app",
+  "version": "1.0.0",
+  "description": "Multi-step Customer Onboarding Application with form validation and webhook integration",
+  "main": "index.html",
+  "scripts": {
+    "start": "http-server -p 3000 -o",
+    "dev": "http-server -p 3000 -o -c-1",
+    "serve": "http-server -p 8080 -o",
+    "build": "echo 'Building static files...' && echo 'Build complete!'",
+    "test": "echo 'No tests specified'",
+    "lint": "echo 'Linting HTML, CSS, and JS files...'",
+    "format": "prettier --write '*.html' '*.css' '*.js'",
+    "validate": "html-validate index.html"
+  },
+  "keywords": [
+    "customer-onboarding",
+    "form",
+    "multi-step",
+    "webhook",
+    "validation"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "prettier": "^3.0.0",
+    "html-validate": "^8.0.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/customer-onboarding-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/customer-onboarding-app/issues"
+  },
+  "homepage": "https://github.com/yourusername/customer-onboarding-app#readme"
+}
