@@ -50,7 +50,7 @@ function formatCVCode(input) {
 }
 
 // Configuration
-const WEBHOOK_URL = 'https://niharvyas.app.n8n.cloud/webhook-test/onboard'; // Replace with your actual webhook URL
+const WEBHOOK_URL = 'https://niharvyas.app.n8n.cloud/webhook/onboard'; // Replace with your actual webhook URL
 
 // Multi-step form functionality
 let currentSection = 1;
@@ -629,3 +629,4 @@ function isValidUrl(url) {
         return false;
     }
 }
+
