@@ -149,7 +149,7 @@
                         <label>TYPE OF BUSINESS</label>
                         <div class="radio-group">
                             <label class="radio-label">
-                                <input type="radio" name="businessType" value="hospital" required>
+                                <input type="radio" name="businessType" value="hospital" required checked>
                                 <span>Hospital</span>
                             </label>
                             <label class="radio-label">
@@ -171,7 +171,7 @@
                         <div class="tax-id-container">
                             <select id="taxIdType" name="taxIdType" required>
                                 <option value="">Select Type</option>
-                                <option value="EIN">EIN</option>
+                                <option value="EIN" selected>EIN</option>
                                 <option value="SSN">SSN</option>
                             </select>
                             <input type="text" id="federalTaxId" name="federalTaxId" placeholder="XXXXXXXXX" required>
@@ -181,7 +181,7 @@
                     <div class="form-group" fullwidth>
                         <label for="OrganizationNPI">Organization NPI</label>
                         <div class="npi-container">
-                            <input type="text" id="OrgNPI" name="OrganizationNPI" placeholder="XXXXXXXXXX">
+                            <input type="text" id="OrgNPI" name="OrganizationNPI" required placeholder="XXXXXXXXXX">
                         </div>
                     </div>
                     <div id="dmeFields" class="conditional-fields full-width" style="display: none;">
@@ -250,7 +250,7 @@
                         <label>STATE RE-SELLER PERMIT OR EXEMPTION CERTIFICATE?</label>
                         <div class="radio-group">
                             <label class="radio-label">
-                                <input type="radio" name="resellerPermit" value="no" required>
+                                <input type="radio" name="resellerPermit" value="no" required checked>
                                 <span>NO</span>
                             </label>
                             <label class="radio-label">
@@ -284,7 +284,7 @@
                         <label>PO NUMBER REQUIRED WITH INVOICES?</label>
                         <div class="radio-group">
                             <label class="radio-label">
-                                <input type="radio" name="poRequired" value="no" required>
+                                <input type="radio" name="poRequired" value="no" required checked>
                                 <span>NO</span>
                             </label>
                             <label class="radio-label">
@@ -301,7 +301,7 @@
                         <label>PREFERRED INVOICE MAILING METHOD</label>
                         <div class="radio-group">
                             <label class="radio-label">
-                                <input type="radio" name="mailingMethod" value="email" required>
+                                <input type="radio" name="mailingMethod" value="email" required checked>
                                 <span>EMAIL</span>
                             </label>
                             <label class="radio-label">
@@ -314,7 +314,7 @@
                         <label>PAY ALL INVOICES WITH CREDIT CARD?</label>
                         <div class="radio-group">
                             <label class="radio-label">
-                                <input type="radio" name="payWithCard" value="no" required>
+                                <input type="radio" name="payWithCard" value="no" required checked>
                                 <span>NO</span>
                             </label>
                             <label class="radio-label">
@@ -409,7 +409,7 @@
                         <label>SHIPPING METHOD</label>
                         <div class="radio-group">
                             <label class="radio-label">
-                                <input type="radio" name="shippingMethod" value="upsGround">
+                                <input type="radio" name="shippingMethod" value="upsGround" checked>
                                 <span>UPS GROUND</span>
                             </label>
                             <label class="radio-label">
@@ -438,7 +438,7 @@
                         <label>SHIPPING BILL-TO</label>
                         <div class="radio-group">
                             <label class="radio-label">
-                                <input type="radio" name="shippingBillTo" value="yourAccount">
+                                <input type="radio" name="shippingBillTo" value="yourAccount" checked>
                                 <span>YOUR ACCOUNT?</span>
                             </label>
                             <label class="radio-label">
@@ -457,7 +457,7 @@
                         <label>SHIPPING CONSOLIDATION METHOD</label>
                         <div class="radio-group">
                             <label class="radio-label">
-                                <input type="radio" name="consolidationMethod" value="daily">
+                                <input type="radio" name="consolidationMethod" value="daily" checked>
                                 <span>DAILY</span>
                             </label>
                             <label class="radio-label">
